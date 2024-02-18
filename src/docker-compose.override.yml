@@ -1,0 +1,11 @@
+version: '3.4'
+
+services:
+  catalog.api:
+    container_name: catalog.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8000:80"
+    volumes:
+      - ./Services/Catalog/Catalog.API/catalog.db:/app/catalog.db
